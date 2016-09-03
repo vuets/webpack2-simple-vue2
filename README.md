@@ -1,4 +1,4 @@
-# webpack2-simple-vue1
+# webpack2-simple-vue2
 
 > A simple webpack2 template with vuets + vue/vue-router 2.0.
 > Supports tree-shaking with es2015 modules
