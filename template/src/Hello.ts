@@ -24,18 +24,16 @@ export class Hello extends HasMsg {
         super.append('?' + suffix)
     }
 }
-// workaround for current vue-router bug 
-// that calls activate before the component is created
-let $self: Hello|null = null
-function activate(self: Hello) { if ($self || ($self = self)) Hello.activate($self) }
 export default component({
-    mounted(this: Hello) { if ($self === undefined) { Hello.activate($self = this) } },
     template: `
 <div>
   <h3 @click="append('!')">\{{ msg }}</h3>
   <div>
     activate count: \{{ activate }}
   </div>
+  <div>
+    deactivate count: \{{ deactivate }}
+  </div>
 </div>
 `
-}, Hello, activate/*, Hello.deactivate*/)
+}, Hello, Hello.activate, Hello.deactivate)
