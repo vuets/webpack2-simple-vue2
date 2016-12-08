@@ -1,6 +1,6 @@
 # webpack2-simple-vue2
 
-> A simple webpack2 template with [vuets](https://github.com/vuets/vuets) + vue/vue-router 2.0.
+> A simple webpack2 template with [vuets](https://github.com/vuets/vuets) + vue/vue-router 2.1.
 > Supports tree-shaking with es2015 modules
 
 ### Usage
