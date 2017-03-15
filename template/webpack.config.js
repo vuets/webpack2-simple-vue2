@@ -10,33 +10,28 @@ module.exports = {
     filename: 'build.js'
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts', '.vue'],
     alias: {
-      vue: 'vue/dist/vue.common.js'
+      'vue$': 'vue/dist/vue.common.js'
     }
   },
   module: {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue'
+        loader: 'vue-loader'
       },
       {
         test: /\.ts$/,
         loader: 'ts-loader'
       },
       {
-        test: /\.js$/,
-        loader: 'babel',
-        exclude: /node_modules/
-      },
-      {
         test: /\.less$/,
-        loader: 'less'
+        loader: 'less-loader'
       },
       {
         test: /\.(png|jpg|gif|svg|ttf)$/,
-        loader: 'file',
+        loader: 'file-loader',
         query: {
           name: '[name].[ext]?[hash]'
         }
