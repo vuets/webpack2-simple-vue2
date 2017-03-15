@@ -58,8 +58,8 @@ if (process.env.NODE_ENV === 'production') {
       compiler: {
         language_in: 'ECMASCRIPT6',
         language_out: 'ECMASCRIPT5',
-        compilation_level: 'SIMPLE',
-        create_source_map: true
+        compilation_level: 'SIMPLE'/*,
+        create_source_map: true*/
       },
       concurrency: 3
     })
